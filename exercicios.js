@@ -40,14 +40,17 @@ imprimirPessoa3()*/
 function login() {
     let usuario=prompt("qual é o seu nominho?")
     let email=prompt("Qual é o seu e-mail?")
-    let novoEmail=email.toLowerCase
+    let novoEmail=email.toLowerCase()
     let senha=prompt("Qual é a sua senha? obs: deve ter 8 caracteres")
 
     console.log(`O e-mail ${novoEmail} foi cadastrado com sucesso. Boas vindas, ${usuario}!`);
     console.log(`Sua senha tem ${senha.length} caracteres, abestado`);
+    let conferencia=senha.length===8
+    console.log(`Sua senha tem 8 caracteres?`, conferencia)
     let novaSenha=senha.replaceAll("a","x");
+    novaSenha=novaSenha.replaceAll("A","x");
     console.log(`Sua nova senha é ${novaSenha}`)
-    //let procuraArroba=novoEmail.includes("@")
-    //console.log("Seu e-mail possui "@"? ",procuraArroba  )
+    let procuraArroba=novoEmail.includes("@")
+    console.log("Seu e-mail possui '@'? ",procuraArroba)
 }
 login()
