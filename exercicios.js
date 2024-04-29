@@ -25,7 +25,7 @@ imprimirPessoa2()*/
 
 //Exercício 3 - Faça com que o nome da pessoa sempre seja exibido em letras maiúsculas - Exiba no console quantos caracteres tem o nome da pessoa - Verifique se o nome da pessoa possui a letra A
 
-function imprimirPessoa3(){
+/*function imprimirPessoa3(){
     let nome=prompt("Diga o seu nome:")
     let tamanhoNome=nome.length
     let nomeTemA=nome.includes("a")
@@ -33,4 +33,21 @@ function imprimirPessoa3(){
     console.log(`Seu nome tem ${tamanhoNome} letras`);
     console.log(`Seu nome tem a letra "a":`, nomeTemA)
 }
-imprimirPessoa3()
+imprimirPessoa3()*/
+
+//Desafio Crie uma função  que pergunte ao usuário seu nome e seu e-mail e senha. A senha deve ter 8 caracteres, e você deve garantir que todas as letras do email sejam minúsculas. Em seguida, imprima no console a mensagem no formato abaixo: "O e-mail emailDoUsuario foi cadastrado com sucesso. Boas vindas, nomeDoUsuario!" Sua  senha tem 8 caracteres? (true/false) Substitua todas as letras A da senha criada, pela letra X Verifique se o e-mail da pessoa possui @, e imprima a resposta da verificação no console.
+
+function login() {
+    let usuario=prompt("qual é o seu nominho?")
+    let email=prompt("Qual é o seu e-mail?")
+    let novoEmail=email.toLowerCase
+    let senha=prompt("Qual é a sua senha? obs: deve ter 8 caracteres")
+
+    console.log(`O e-mail ${novoEmail} foi cadastrado com sucesso. Boas vindas, ${usuario}!`);
+    console.log(`Sua senha tem ${senha.length} caracteres, abestado`);
+    let novaSenha=senha.replaceAll("a","x");
+    console.log(`Sua nova senha é ${novaSenha}`)
+    //let procuraArroba=novoEmail.includes("@")
+    //console.log("Seu e-mail possui "@"? ",procuraArroba  )
+}
+login()
